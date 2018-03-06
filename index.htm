@@ -494,6 +494,7 @@ a:hover {
 }
 
 .cancel-sign-up {
+	background: none;
 	border: 3px solid #888;
 	color: #888;
 	padding: 7px;
@@ -516,10 +517,19 @@ a:hover {
 		position: static;
 	}
 
-	.follow-me-blurb {
-		border: 2px solid #FC913A;
+	.follow-me-blurb, .sign-up {
+		border-width: 2px;
 	    padding: 10px;
 	    margin: 0 -12px;
+	}
+
+	.sign-up-buttons button {
+		display: block;
+		width: 100%;
+	}
+
+	.sign-up-buttons button[type="submit"] {
+		margin-bottom: 10px;
 	}
 }
 </style>
