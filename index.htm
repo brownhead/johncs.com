@@ -532,6 +532,19 @@ a:hover {
 	}
 }
 </style>
+<script>
+function showSignUp() {
+	var signUpForm = document.getElementById("sign-up-form");
+	signUpForm.style.display = "";
+	signUpForm.scrollIntoView();
+
+}
+
+function hideSignUp() {
+	var signUpForm = document.getElementById("sign-up-form");
+	signUpForm.style.display = "none";
+}
+</script>
 </head>
 <body>
 <div class="rainbow-container">
@@ -557,7 +570,7 @@ a:hover {
     </p>
     <p class="follow-me-blurb">
         Interested in what I'm working on? Then <a href="https://twitter.com/itsjohncs">follow me on Twitter</a> or
-        <a href="#"><span>join my mailing list</span></a>.
+        <a href="javascript: void 0" onclick="showSignUp()"><span>join my mailing list</span></a>.
         Feel free also to <a href="mailto:johnsullivan.pem@gmail.com"><span>email me</span></a> kind words.
     </p>
     <p>
@@ -576,9 +589,9 @@ a:hover {
         <li>A way to easily get advice on your houseplants from an expert.</li>
     </ul>
     <p>
-        Interested? <a href="https://twitter.com/itsjohncs">Follow me on twitter</a> or <a href="#">join my mailing list</a>.
+        Interested? <a href="https://twitter.com/itsjohncs">Follow me on twitter</a> or <a href="javascript: void 0" onclick="showSignUp()">join my mailing list</a>.
     </p>
-    <form class="sign-up">
+    <form class="sign-up" style="display: none;" id="sign-up-form">
     	<h2 class="sign-up-title">Mailing list signup</h2>
     	<p>
     		You'll get occasional updates on the product ideas you're interested in.
@@ -601,7 +614,7 @@ a:hover {
        	</label>
        	<div class="sign-up-buttons">
 	       	<button type="submit">Join</button>
-	       	<button type="cancel" class="cancel-sign-up">Cancel</button>
+	       	<button type="button" href="javascript: void 0" onclick="hideSignUp()" class="cancel-sign-up">Cancel</button>
 	    </div>
     </form>
 </article>
