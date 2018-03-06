@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -373,7 +375,7 @@ a:hover {
     position:absolute;
     top: 0;
     bottom: 0;
-    width: 148px;
+    width: 150px;
     z-index: -1;
     text-align: center;
     overflow: hidden;
@@ -381,23 +383,21 @@ a:hover {
 
 .me-pic {
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 25px;
     top: 40px;
     width: 100px;
     height: 100px;
-    margin: 0 auto;
     border-radius: 50%;
     box-shadow: 2px 2px 8px #333;
 }
 
 /**
- * The text on the right
+ * The standard text on the right
  */
 
 .about-me {
-    width: 500px;
-    margin: 40px 0 0 150px;
+    max-width: 500px;
+    margin: 40px 10px 40px 150px;
 }
 
 .title-name {
@@ -409,14 +409,124 @@ a:hover {
 .follow-me-blurb {
     border: 3px solid #FC913A;
     padding: 15px;
-    margin: 0 -18px;
+    margin-left: -18px;
+}
+
+/**
+ * The sign-up form
+ */
+
+.sign-up {
+	border: 3px solid #69D2E7;
+	padding: 15px;
+	margin: 16px 0 16px -18px;
+	/*color: #EFEFEF;*/
+}
+
+.sign-up-title {
+	margin-top: 0;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.sign-up label {
+	display: block;
+}
+
+.email-label span {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+
+.email-label input {
+	display: block;
+	min-width: 75%;
+	border: 1px solid #ccc;
+	outline: none;
+	padding: 8px;
+}
+
+.email-label input:focus {
+	border: 2px solid #69D2E7;
+	margin: -1px;
+}
+
+.product-checkbox-label {
+	margin-bottom: 10px;
+	white-space: nowrap;
+	display: flex !important;
+	width: 100%;
+}
+
+.product-checkbox-label input {
+	margin-right: 8px;
+	vertical-align: middle;
+	width: 14px;
+	display: block;
+}
+
+.product-checkbox-label span {
+	vertical-align: middle;
+	display: block;
+	white-space: normal;
+	flex: 1;
+}
+
+.sign-up-buttons {
+	color: #333;
+	margin-top: 18px;
+}
+
+.sign-up-buttons button {
+	width: 12em;
+	text-align: center;
+}
+
+.sign-up-buttons button[type="submit"] {
+	background: #33E46D;
+	color: #FFF;
+	border: none;
+	padding: 10px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.cancel-sign-up {
+	border: 3px solid #888;
+	color: #888;
+	padding: 7px;
+}
+
+/**
+ * Mobile tweaks
+ */
+@media (max-width: 700px) {
+	.rainbow-container {
+		width: 3px;
+	}
+
+	.about-me {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	.me-pic {
+		position: static;
+	}
+
+	.follow-me-blurb {
+		border: 2px solid #FC913A;
+	    padding: 10px;
+	    margin: 0 -12px;
+	}
 }
 </style>
-<head>
 </head>
 <body>
 <div class="rainbow-container">
-	<img class="me-pic" src="https://avatars1.githubusercontent.com/u/367832?s=460&v=4">
     <svg viewBox="0 0 3 600" preserveAspectRatio="none" height="100%" width="3">
         <defs>
             <linearGradient id="rainbow" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse">
@@ -432,17 +542,18 @@ a:hover {
     </svg>
 </div>
 <article class="about-me">
+	<img class="me-pic" src="https://avatars1.githubusercontent.com/u/367832?s=460&v=4">
     <h1 class="title-name">John Sullivan</h1>
     <p>
         Hello 👋! I'm a grown-up queer kid tryna make snazzy stuff and do some good. They/them please.
     </p>
-    <aside class="follow-me-blurb">
-        Interested in what I'm working on? Then you should <a href="https://twitter.com/itsjohncs">follow me on Twitter</a> or
+    <p class="follow-me-blurb">
+        Interested in what I'm working on? Then <a href="https://twitter.com/itsjohncs">follow me on Twitter</a> or
         <a href="#"><span>join my mailing list</span></a>.
         Feel free also to <a href="mailto:johnsullivan.pem@gmail.com"><span>email me</span></a> kind words.
-    </aside>
+    </p>
     <p>
-        I started proramming back in 2000 at eight years old. I began programming professionally eight years later in 2008. Finally ten years later in 2018 I'm changing tracks and devoting my worktime to social good.
+        I started programming back in 2000 at eight years old. I began programming professionally eight years later in 2008. Finally ten years later in 2018 I'm changing tracks and devoting my worktime to social good.
     </p>
     <p>
         I'm giving free engineering consulting to awesome orgs who wouldn't get it otherwise, I intend to help improve the sex education in the US, and there's a ton of free resources I'd like to make.
@@ -459,6 +570,32 @@ a:hover {
     <p>
         Interested? <a href="https://twitter.com/itsjohncs">Follow me on twitter</a> or <a href="#">join my mailing list</a>.
     </p>
+    <form class="sign-up">
+    	<h2 class="sign-up-title">Mailing list signup</h2>
+    	<p>
+    		You'll get occasional updates and be the first to hear about any crowdfunding campaigns.
+    	</p>
+		<label class="email-label"><span>Email</span> <input name="email" type="email"></label>
+		<p style="font-size: 14px">
+			Interests
+		</p>
+		<label class="product-checkbox-label">
+			<input type="checkbox"><span>A tool for playing tabletop RPGs remotely.</span>
+		</label>
+		<label class="product-checkbox-label">
+			<input type="checkbox"><span>A platform for magicians to sell tricks and other tutelage.</span>
+		</label>
+        <label class="product-checkbox-label">
+        	<input type="checkbox"><span>A constraint-powered scheduling tool for Google Calendar.</span>
+        </label>
+        <label class="product-checkbox-label">
+        	<input type="checkbox"><span>A way to easily get advice on your houseplants from an expert.</span>
+       	</label>
+       	<div class="sign-up-buttons">
+	       	<button type="submit">Join</button>
+	       	<button class="cancel-sign-up">Cancel</button>
+	    </div>
+    </form>
 </article>
 </body>
 </html>
