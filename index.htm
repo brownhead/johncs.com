@@ -345,8 +345,8 @@ template {
 </style>
 <style>
 html{
-    min-height:100%;
-    position:relative;
+    min-height: 100%;
+    position: relative;
 }
 
 body {
@@ -356,25 +356,43 @@ body {
     color: #333;
 }
 
-.me-pic {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 8px #333;
-    left: 25px;
-    top: 43px;
+a {
+    color: #45ADA8;
+    text-decoration: none;
 }
 
-.rainbow-line {
-    position:absolute;
-    top:0;
-    bottom: 0;
-    left:74px;
-    width: 3px;
-    overflow:hidden;
-    z-index:-1;
+a:hover {
+    text-decoration: underline;
 }
+
+/**
+ * The rainbow and image on the left
+ */
+
+.rainbow-container {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    width: 148px;
+    z-index: -1;
+    text-align: center
+}
+
+.me-pic {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px #333;
+}
+
+/**
+ * The text on the right
+ */
 
 .about-me {
     width: 500px;
@@ -387,20 +405,7 @@ body {
     letter-spacing: 1px;
 }
 
-.section-title {
-    font-size: 18px;
-}
-
-a {
-    color: #45ADA8;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-.link-bar {
+.follow-me-blurb {
     border: 3px solid #FC913A;
     padding: 15px;
     margin: 0 -18px;
@@ -409,8 +414,9 @@ a {
 <head>
 </head>
 <body>
-<div class="rainbow-line">
-    <svg viewBox="0 0 3 600" preserveAspectRatio="none" height="100%" width="100%">
+<div class="rainbow-container">
+	<img class="me-pic" src="https://avatars1.githubusercontent.com/u/367832?s=460&v=4">
+    <svg viewBox="0 0 3 600" preserveAspectRatio="none" height="100%" width="3">
         <defs>
             <linearGradient id="rainbow" x1="0" x2="0" y1="0" y2="100%" gradientUnits="userSpaceOnUse">
                 <stop offset="0%" stop-color="red"/>
@@ -424,39 +430,34 @@ a {
         <rect fill="url(#rainbow)" x="0" y="0" width="3" height="600"></rect>
     </svg>
 </div>
-
-<img class="me-pic" src="https://avatars1.githubusercontent.com/u/367832?s=460&v=4">
-
-<div class="main-content">
-    <article class="about-me">
-        <h1 class="title-name">John Sullivan</h1>
-        <p>
-            Hello 👋! I'm a grown-up queer kid tryna make snazzy stuff and do some good. They/them please.
-        </p>
-        <aside class="link-bar">
-            Interested in what I'm working on? Then you should <a href="https://twitter.com/itsjohncs">follow me on Twitter</a> or
-            <a href="#"><span>join my mailing list</span></a>.
-            Feel free also to <a href="mailto:johnsullivan.pem@gmail.com"><span>email me</span></a> kind words.
-        </aside>
-        <p>
-            I started proramming back in 2000 at eight years old. I began programming professionally eight years later in 2008. Finally ten years later in 2018 I'm changing tracks and devoting my worktime to social good.
-        </p>
-        <p>
-            I'm giving free engineering consulting to awesome orgs who wouldn't get it otherwise, I intend to help improve the sex education in the US, and there's a ton of free resources I'd like to make.
-        </p>
-        <p>
-            I want do and continue to do these things for a long time, but none of it will feed me and I need income. So first I'll make a product to give me that income. I have four product ideas that I'm considering seriously, but only one will be built:
-        </p>
-        <ul>
-            <li>A tool for playing tabletop RPGs remotely.</li>
-            <li>A platform for magicians to sell tricks and other tutelage.</li>
-            <li>A constraint-powered scheduling tool for Google Calendar.</li>
-            <li>A way to easily get advice on your houseplants from an expert.</li>
-        </ul>
-        <p>
-            Interested? <a href="https://twitter.com/itsjohncs">Follow me on twitter</a> or <a href="#">join my mailing list</a>.
-        </p>
-    </article>
-</div>
+<article class="about-me">
+    <h1 class="title-name">John Sullivan</h1>
+    <p>
+        Hello 👋! I'm a grown-up queer kid tryna make snazzy stuff and do some good. They/them please.
+    </p>
+    <aside class="follow-me-blurb">
+        Interested in what I'm working on? Then you should <a href="https://twitter.com/itsjohncs">follow me on Twitter</a> or
+        <a href="#"><span>join my mailing list</span></a>.
+        Feel free also to <a href="mailto:johnsullivan.pem@gmail.com"><span>email me</span></a> kind words.
+    </aside>
+    <p>
+        I started proramming back in 2000 at eight years old. I began programming professionally eight years later in 2008. Finally ten years later in 2018 I'm changing tracks and devoting my worktime to social good.
+    </p>
+    <p>
+        I'm giving free engineering consulting to awesome orgs who wouldn't get it otherwise, I intend to help improve the sex education in the US, and there's a ton of free resources I'd like to make.
+    </p>
+    <p>
+        I want do and continue to do these things for a long time, but none of it will feed me and I need income. So first I'll make a product to give me that income. I have four product ideas that I'm considering seriously, but only one will be built:
+    </p>
+    <ul>
+        <li>A tool for playing tabletop RPGs remotely.</li>
+        <li>A platform for magicians to sell tricks and other tutelage.</li>
+        <li>A constraint-powered scheduling tool for Google Calendar.</li>
+        <li>A way to easily get advice on your houseplants from an expert.</li>
+    </ul>
+    <p>
+        Interested? <a href="https://twitter.com/itsjohncs">Follow me on twitter</a> or <a href="#">join my mailing list</a>.
+    </p>
+</article>
 </body>
 </html>
