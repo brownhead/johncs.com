@@ -427,11 +427,14 @@ a:hover {
 }
 
 .nav-bar {
-    border: 3px solid #CCC;
+    /*border: 3px solid #CCC;
     padding: 15px;
-    margin-left: -18px;
+    margin-left: -18px;*/
+    /*margin-top: 20px;*/
     color: #CCC;
     word-spacing: 4px;
+    text-align: center;
+    line-height: 2;
 }
 
 .nav-bar a {
@@ -499,30 +502,15 @@ a:hover {
 	flex: 1;
 }
 
-.sign-up-buttons {
-	color: #333;
-	margin-top: 18px;
-}
-
-.sign-up-buttons button {
-	width: 12em;
-	text-align: center;
-}
-
-.sign-up-buttons button[type="submit"] {
+.sign-up-button {
 	background: #33E46D;
-	color: #FFF;
 	border: none;
-	padding: 10px;
+	color: #FFF;
 	font-weight: bold;
 	margin-right: 10px;
-}
-
-.cancel-sign-up {
-	background: none;
-	border: 2px solid #888;
-	color: #888;
-	padding: 8px;
+	padding: 10px;
+	text-align: center;
+	width: 12em;
 }
 
 /**
@@ -548,13 +536,9 @@ a:hover {
 	    margin-left: -12px;
 	}
 
-	.sign-up-buttons button {
+	.sign-up-button {
 		display: block;
 		width: 100%;
-	}
-
-	.sign-up-buttons button[type="submit"] {
-		margin-bottom: 10px;
 	}
 }
 </style>
@@ -622,7 +606,7 @@ function updateLists() {
     <form class="sign-up" id="lets-get-these-made" action="https://johncs.us12.list-manage.com/subscribe/post?u=e2c74b2a675e3e8be23cc941e&amp;id=f53bd22cbd" method="post" name="mc-embedded-subscribe-form" novalidate>
     	<h2 class="sign-up-title">Let's get these made</h2>
     	<p>
-    		Would you support a Kickstarter for one of these products? Would you tell your friends about one? Do you want one of these ideas to be made?
+    		Do you want these to be made? Would you support a Kickstarter for one of these products? Would you tell your friends about one?
     	</p>
     	<p>
     		Lemme know your email and I'll tell you when you can help out.
@@ -648,12 +632,10 @@ function updateLists() {
        	<p>
     		<i>You'll receive emails only from me, and there'll be very few.</i>
     	</p>
-       	<div class="sign-up-buttons">
-	       	<button type="submit">Subscribe</button>
-	    </div>
+	    <button class="sign-up-button" type="submit">Subscribe</button>
     </form>
     <p class="nav-bar">
-		<a href="http://johnsullivan.name">Resume</a> | <a href="http://blog.johncs.com">Blog</a> | <a href="https://twitter.com/itsjohncs">Twitter</a> | <a href="http://johncs.xyz/">Silly&nbsp;Dots</a>
+		<a href="mailto:johnsullivan.pem@gmail.com">Email</a> | <a href="https://twitter.com/itsjohncs">Twitter</a> | <a href="http://johnsullivan.name">Resume</a> | <a href="http://blog.johncs.com">Blog</a> | <a href="http://johncs.xyz/">Silly&nbsp;Dots</a>
     </p>
 </article>
 </body>
