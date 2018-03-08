@@ -426,6 +426,18 @@ a:hover {
     margin-left: -18px;
 }
 
+.nav-bar {
+    border: 3px solid #CCC;
+    padding: 15px;
+    margin-left: -18px;
+    color: #CCC;
+    word-spacing: 4px;
+}
+
+.nav-bar a {
+	word-spacing: 0
+}
+
 /**
  * The sign-up form
  */
@@ -530,10 +542,10 @@ a:hover {
 		position: static;
 	}
 
-	.follow-me-blurb, .sign-up {
+	.follow-me-blurb, .sign-up, .nav-bar {
 		border-width: 2px;
 	    padding: 10px;
-	    margin: 0 -12px;
+	    margin-left: -12px;
 	}
 
 	.sign-up-buttons button {
@@ -547,18 +559,6 @@ a:hover {
 }
 </style>
 <script>
-function showSignUp() {
-	var signUpForm = document.getElementById("sign-up-form");
-	signUpForm.style.display = "";
-	signUpForm.scrollIntoView();
-
-}
-
-function hideSignUp() {
-	var signUpForm = document.getElementById("sign-up-form");
-	signUpForm.style.display = "none";
-}
-
 function updateLists() {
 	var checkboxes = document.getElementsByClassName("list-checkbox");
 	var lists = [];
@@ -598,17 +598,17 @@ function updateLists() {
     </p>
     <p class="follow-me-blurb">
         Interested in what I'm working on? Then <a href="https://twitter.com/itsjohncs">follow me on Twitter</a> or
-        <a href="javascript: void 0" onclick="showSignUp()"><span>join my mailing list</span></a>.
+        <a href="#lets-get-these-made"><span>gimme your email below</span></a>.
         Feel free also to <a href="mailto:johnsullivan.pem@gmail.com"><span>email me</span></a> kind words.
     </p>
     <p>
-        I started programming back in 2000 at eight years old. I began programming professionally eight years later in 2008. Now in 2018 I'm changing tracks and devoting my worktime to social good.
+        I started programming back in 2000 at eight years old. I began programming professionally eight years later in 2008. <b>Now in 2018 I'm changing tracks and devoting my worktime to social good.</b>
     </p>
     <p>
-        I'm giving free engineering consulting to awesome orgs who wouldn't get it otherwise; I intend to help improve the sex education in the US; and there's a ton of free resources I'd like to make.
+        Now I'm giving free engineering consulting to awesome orgs who wouldn't get it otherwise; I intend to help improve the sex education in the US; and there's a ton of free resources I'd like to make.
     </p>
     <p>
-        I want to do these things for a long time, but none of it will feed me and I need income. So first I'll make a product to give me that income. I have four product ideas that I'm considering seriously, but only one will be built:
+        I wanna do these things for a long time, but none of it will feed me and I need income. So first I'll make a product to give me that income. I have four product ideas that I'm considering seriously, but only one will be built:
     </p>
     <ul>
         <li>A tool for playing tabletop RPGs remotely.</li>
@@ -617,15 +617,15 @@ function updateLists() {
         <li>A way to easily get advice on your houseplants from an expert.</li>
     </ul>
     <p>
-        Interested? <a href="https://twitter.com/itsjohncs">Follow me on twitter</a> or <a href="javascript: void 0" onclick="showSignUp()">join my mailing list</a>.
+    	I can create any of these. I have the business, legal, and engineering experience. But I want to know whether <i>you</i> want any of them. So tell me!
     </p>
-    <p>
-    	Wanna learn more about me? <a href="http://johnsullivan.name">Peruse my resume</a> or <a href="http://blog.johncs.com">check out my blog</a>.
-    </p>
-    <form class="sign-up" style="display: none;" id="sign-up-form" action="https://johncs.us12.list-manage.com/subscribe/post?u=e2c74b2a675e3e8be23cc941e&amp;id=f53bd22cbd" method="post" name="mc-embedded-subscribe-form" novalidate>
-    	<h2 class="sign-up-title">Mailing list signup</h2>
+    <form class="sign-up" id="lets-get-these-made" action="https://johncs.us12.list-manage.com/subscribe/post?u=e2c74b2a675e3e8be23cc941e&amp;id=f53bd22cbd" method="post" name="mc-embedded-subscribe-form" novalidate>
+    	<h2 class="sign-up-title">Let's get these made</h2>
     	<p>
-    		You'll get occasional updates on me and any product ideas you're interested in.
+    		Would you support a Kickstarter for one of these products? Would you tell your friends about one? Do you want one of these ideas to be made?
+    	</p>
+    	<p>
+    		Lemme know your email and I'll tell you when you can help out.
     	</p>
 		<label class="email-label"><span>Email</span> <input name="EMAIL" type="email"></label>
 		<input id="lists-field" name="LISTS" type="hidden">
@@ -645,11 +645,16 @@ function updateLists() {
         	<input type="checkbox" class="list-checkbox" onclick="updateLists()" data-list-name="plant_doctor"><span>A way to easily get advice on your houseplants from an expert.</span>
        	</label>
        	<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e2c74b2a675e3e8be23cc941e_f53bd22cbd" tabindex="-1" value=""></div>
+       	<p>
+    		<i>You'll receive emails only from me, and there'll be very few.</i>
+    	</p>
        	<div class="sign-up-buttons">
-	       	<button type="submit">Join</button>
-	       	<button type="button" href="javascript: void 0" onclick="hideSignUp()" class="cancel-sign-up">Cancel</button>
+	       	<button type="submit">Subscribe</button>
 	    </div>
     </form>
+    <p class="nav-bar">
+		<a href="http://johnsullivan.name">Resume</a> | <a href="http://blog.johncs.com">Blog</a> | <a href="https://twitter.com/itsjohncs">Twitter</a> | <a href="http://johncs.xyz/">Silly&nbsp;Dots</a>
+    </p>
 </article>
 </body>
 </html>
