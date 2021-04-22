@@ -390,11 +390,15 @@ a:hover {
     position:absolute;
     top: 0;
     bottom: 0;
-    height: 100%;
+    height: 100vh;
     width: 150px;
     z-index: -1;
     text-align: center;
     overflow: hidden;
+}
+
+.rainbow-container svg {
+    height: 100vh;
 }
 
 .me-pic {
@@ -433,7 +437,6 @@ a:hover {
     font-style: italic;
     font-size: 14px;
     margin-top: -12px;
-    margin-bottom: 30px;
 }
 
 .follow-me-blurb {
@@ -443,13 +446,8 @@ a:hover {
 }
 
 .nav-bar {
-    /*border: 3px solid #CCC;
-    padding: 15px;
-    margin-left: -18px;*/
-    /*margin-top: 20px;*/
     color: #CCC;
     word-spacing: 4px;
-    text-align: center;
     line-height: 2;
 }
 
@@ -566,21 +564,6 @@ a:hover {
     }
 }
 </style>
-<script>
-function updateLists() {
-    var checkboxes = document.getElementsByClassName("list-checkbox");
-    var lists = [];
-    for (var i = 0; i < checkboxes.length; ++i) {
-        if (checkboxes[i].checked) {
-            lists.push(checkboxes[i].getAttribute("data-list-name"));
-        }
-    }
-    lists.sort();
-
-    var listsField = document.getElementById("lists-field");
-    listsField.setAttribute("value", lists.join(";"));
-}
-</script>
 </head>
 <body>
 <div class="rainbow-container">
@@ -604,25 +587,6 @@ function updateLists() {
     <p class="subtitle">
         A grown-up queer kid trying to make snazzy stuff and do some good. My pronouns are they/them.
     </p>
-    <p>
-        Hello 👋! I'm building <a href="https://shmeppy.com">Shmeppy</a>: a web app for playing tabletop RPGs remotely. It's in development but is available for use by the brave.
-    </p>
-    <p>
-        I'm also trying to coax <a href="https://lgbtqprogrammers.com">a new Discord community of LGBTQ+ programmers</a> into existence. Come join us 💜.
-    </p>
-    <form class="sign-up" id="lets-get-these-made" action="https://johncs.us12.list-manage.com/subscribe/post?u=e2c74b2a675e3e8be23cc941e&amp;id=f53bd22cbd" method="post" name="mc-embedded-subscribe-form" novalidate>
-        <h2 class="sign-up-title">Shmeppy's Launch List</h2>
-        <p>
-            Want an email when Shmeppy is out of development?
-        </p>
-        <label class="email-label"><span>Email</span> <input name="EMAIL" type="email"></label>
-        <input id="lists-field" name="LISTS" type="hidden" value="virtual_tabletop">
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e2c74b2a675e3e8be23cc941e_f53bd22cbd" tabindex="-1" value=""></div>
-        <p>
-            <i>You'll receive emails only from me, and there'll be very few.</i>
-        </p>
-        <button class="sign-up-button" type="submit">Subscribe</button>
-    </form>
     <p class="nav-bar">
         <span class="my">My:</span> <a href="https://resume.johncs.com">Resume</a> | <a href="https://blog.johncs.com">Blog</a> | <a href="https://particles.johncs.com">Silly&nbsp;Dots</a> | <a href="mailto:johnsullivan.pem@gmail.com">Email</a> | <a href="https://github.com/itsjohncs">GitHub</a>
     </p>
